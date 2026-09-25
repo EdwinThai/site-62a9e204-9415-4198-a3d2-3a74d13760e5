@@ -17,7 +17,7 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (min-width: 999999px) {
   :root {
     --paper: #241a15;
     --paper-raised: rgba(255,255,255,0.06);
@@ -110,7 +110,7 @@ a { color: inherit; }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,123,90,0.45); }
 .btn-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
-html[data-theme="dark"] .btn-secondary, @media (prefers-color-scheme: dark) { }
+html[data-theme="dark"] .btn-secondary, @media (prefers-color-scheme: dark) and (min-width: 999999px) { }
 .btn-secondary:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
 .btn-small { padding: 0.6rem 1.3rem; font-size: 0.88rem; }
 .btn-light { background: #fff; color: var(--accent-dark); }
@@ -185,7 +185,7 @@ html[data-theme="dark"] .btn-secondary, @media (prefers-color-scheme: dark) { }
 .icon-moon { display: none; }
 html[data-theme="dark"] .icon-sun { display: none; }
 html[data-theme="dark"] .icon-moon { display: block; }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (min-width: 999999px) {
   html:not([data-theme="light"]) .icon-sun { display: none; }
   html:not([data-theme="light"]) .icon-moon { display: block; }
 }
