@@ -17,16 +17,15 @@
     });
   }
 
-  /* Hero parallax */
+  /* Hero parallax (scroll-only -- mouse-follow removed, operator decision 2026-09-25) */
   var heroBg = document.getElementById('heroBg');
   if (heroBg && !reduceMotion) {
     var ticking = false;
-    var mouseX = 0, mouseY = 0;
 
     function updateTransform() {
       var scrollY = window.scrollY || window.pageYOffset;
       var translateY = scrollY * 0.35;
-      heroBg.style.transform = 'translate3d(' + mouseX + 'px,' + (translateY + mouseY) + 'px,0) scale(1.08)';
+      heroBg.style.transform = 'translate3d(0,' + translateY + 'px,0) scale(1.08)';
       ticking = false;
     }
 
@@ -36,16 +35,6 @@
         ticking = true;
       }
     }, { passive: true });
-
-    window.addEventListener('mousemove', function (e) {
-      var w = window.innerWidth, h = window.innerHeight;
-      mouseX = ((e.clientX / w) - 0.5) * 16;
-      mouseY = ((e.clientY / h) - 0.5) * 10;
-      if (!ticking) {
-        window.requestAnimationFrame(updateTransform);
-        ticking = true;
-      }
-    });
   }
 
   /* Footer year */
