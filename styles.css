@@ -225,7 +225,6 @@ html[data-theme="dark"] .icon-moon { display: block; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem 1.5rem;
   overflow: hidden;
   color: #fff;
 }
@@ -236,7 +235,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(59,34,24,0.55), rgba(59,34,24,0.72));
 }
-.hero-content { position: relative; z-index: 2; max-width: 720px; }
+.hero-content { position: relative; z-index: 2; max-width: 720px; padding: 2rem 1.5rem; }
 .hero .eyebrow { color: var(--mustard); }
 .hero h1.name-write {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
